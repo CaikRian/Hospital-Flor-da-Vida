@@ -1,5 +1,10 @@
 # Hospital Flor da Vida
 
+## Logo
+
+  <img src="assets/img/_a4fe6667-c233-41ab-a6a9-264c97b17558.jpeg" alt="Logo do Hospital" width="50%"/>
+
+
 ## Descrição
 
 Este é um site fictício criado para demonstrar um sistema de cadastro de pacientes para um hospital. O site é focado em fornecer uma interface intuitiva para que os médicos possam registrar e gerenciar informações dos pacientes, agendamentos, exames e diagnósticos.
@@ -26,19 +31,9 @@ Este é um site fictício criado para demonstrar um sistema de cadastro de pacie
 - **`styles.css`**: Arquivo CSS para customização e estilos.
 - **`scripts.js`**: Arquivo JavaScript para funcionalidades adicionais.
 
-## Imagens
-
-![Logo do Hospital](assets/img/_a4fe6667-c233-41ab-a6a9-264c97b17558.jpeg)
-
-## Informações Legais
-
-- [Política de Privacidade](#)
-- [Termos de Uso](#)
-- [Segurança de Dados](#)
-
 ## Criador
 
-Este site foi desenvolvido por [Caik Rian](https://seuportfolio.com.br).
+Este site foi desenvolvido por [Caik Rian](https://meu-portfolio-pi-opal.vercel.app).
 
 © Todos os direitos reservados. Este site é fictício e criado apenas para fins demonstrativos.
 
