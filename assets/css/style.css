@@ -1,0 +1,63 @@
+
+body{
+    padding-top: 100px;
+    background-image: url("../img/jonathan-borba-yQZkB9rbK7o-unsplash.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    
+}
+img{
+    border-radius: 100%;
+}
+nav{
+    background-color: #0D2840;
+    box-shadow: 0px 0px 20px #000000;
+}
+.navbar .dropdown-toggle::after {
+    display: none; /* Remove a seta para baixo */
+    
+}
+.navbar-nav .nav-link {
+    color: white;
+}
+nav ul li{
+
+    border-bottom: solid 2px rgba(0, 0, 0, 0);
+    transition: 0.5s;
+}
+nav ul li:hover{
+    
+    border-color:white;
+
+}
+.navbar-nav .nav-link:hover {
+    color: rgb(141, 139, 139);
+}
+#custom_container{
+   
+    background-color: rgba(255, 255, 255, 0.836);
+    box-shadow: 0px 0px 100px 0px rgb(0, 0, 0);
+    font-weight: bold;
+    
+}
+
+input:focus{
+    outline: none;
+}
+
+
+footer a{
+    text-decoration: none;
+    color: black;
+}
+       
+.row.mt-4.align-items-center.g-4{
+    border-top: solid 5px #0D2840;
+    
+}
+
+
+        
+
+    
