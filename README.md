@@ -8,6 +8,8 @@
 ## Descrição
 Trabalho feito para a materia de: *Desenvolvimento de Software para Web*
 
+Período: Noturno
+
 Professor: Gerson Gazola
 
 Aluno: Caik Rian Gadelha Vieira
