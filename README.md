@@ -6,6 +6,13 @@
 
 
 ## Descrição
+Trabalho feito para a materia de: *Desenvolvimento de Software para Web*
+
+Professor: Gerson Gazola
+
+Aluno: Caik Rian Gadelha Vieira
+
+R.A: 2110810
 
 Este é um site fictício criado para demonstrar um sistema de cadastro de pacientes para um hospital. O site é focado em fornecer uma interface intuitiva para que os médicos possam registrar e gerenciar informações dos pacientes, agendamentos, exames e diagnósticos.
 
