@@ -66,7 +66,7 @@ $host = 'localhost'; // servidor
 $user = 'root'; // usuário do MySQL
 $password = ''; // senha do MySQL (por padrão, não há senha)
 $dbname = 'hospitalflordavida'; // nome do banco de dados
-
+````
 ## Tecnologias Utilizadas
 
 - **HTML**: Estrutura do site.
