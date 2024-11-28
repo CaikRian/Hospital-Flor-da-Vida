@@ -145,7 +145,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['excluir'])) {
                         <th>Nome</th>
                         <th>CPF</th>
                         <th>E-mail</th>
-                        <th>Histórico</th>
                         <th>Detalhe</th>
                         <th>Ações</th>
                     </tr>
@@ -156,16 +155,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['excluir'])) {
                             <td><?php echo htmlspecialchars($paciente['nome_completo']); ?></td>
                             <td><?php echo htmlspecialchars($paciente['cpf']); ?></td>
                             <td><?php echo htmlspecialchars($paciente['email']); ?></td>
-                            <td><?php echo htmlspecialchars($paciente['historico_medico']); ?></td>
                             <td><?php echo htmlspecialchars($paciente['mensagem']); ?></td>
                             <td>
-                                <a href="editar_paciente.php?cpf_paciente=<?php echo $paciente['cpf']; ?>" class="btn btn-warning">Ver Mais</a>
+                                <!-- Botão "Ver Mais" -->
+                                <a href="editar_paciente.php?cpf_paciente=<?php echo $paciente['cpf']; ?>" class="btn btn-warning btn-sm">Ver Mais</a>
 
                                 <!-- Formulário de exclusão -->
-                                <form action="consultar_pacientes.php" method="POST" onsubmit="confirmarExclusao(event)">
+                                <form action="consultar_pacientes.php" method="POST" class="d-inline" onsubmit="confirmarExclusao(event)">
                                     <input type="hidden" name="cpf_paciente" value="<?php echo htmlspecialchars($paciente['cpf']); ?>">
-                                    <button type="submit" name="excluir" class="btn btn-danger">Excluir</button>
+                                    <button type="submit" name="excluir" class="btn btn-danger btn-sm">Excluir</button>
                                 </form>
+                                
                             </td>
                         </tr>
                     <?php endwhile; ?>

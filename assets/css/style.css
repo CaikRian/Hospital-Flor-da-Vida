@@ -1,78 +1,97 @@
-
-body{
+/* ======= BODY ======= */
+body {
     padding-top: 100px;
     background-image: url("../img/jonathan-borba-yQZkB9rbK7o-unsplash.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     transition: 0.5s;
-    
 }
-img{
+
+/* ======= IMAGENS ======= */
+img {
     border-radius: 100%;
 }
-nav{
+
+/* ======= NAVBAR ======= */
+nav {
     background-color: #0D2840;
     box-shadow: 0px 0px 20px #000000;
 }
-#navbarNav{
+
+#navbarNav {
     margin-left: 250px;
 }
+
 .navbar-toggler {
     background-color: aliceblue;
-  }
+}
 
-  .navbar-toggler-icon {
+.navbar-toggler-icon {
     background-image: var("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white', 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     /* Define a cor do ícone do hamburger (branco neste exemplo) */
-  }
+}
+
 .navbar .dropdown-toggle::after {
     display: none; /* Remove a seta para baixo */
-    
 }
+
 .navbar-nav .nav-link {
     color: white;
 }
-nav ul li{
 
+/* ======= MENU ======= */
+nav ul li {
     border-bottom: solid 2px rgba(0, 0, 0, 0);
     transition: 0.5s;
 }
-nav ul li:hover{
-    
-    border-color:white;
 
+nav ul li:hover {
+    border-color: white;
 }
-.navbar-nav .nav-link:hover {
-    color: rgb(141, 139, 139);
-}
-#custom_container{
-   
-    background-color: rgba(255, 255, 255, 0.836);
-    box-shadow: 0px 0px 100px 0px rgb(0, 0, 0);
-    font-weight: bold;
-    
-}
-#btn-submit{
+
+/* ======= FORMULÁRIOS ======= */
+#btn-submit {
     background-color: #0D2840;
     color: white;
 }
-input:focus{
+
+input:focus {
     outline: none;
 }
 
+/* ======= CONTAINER PERSONALIZADO ======= */
+#custom_container {
+    background-color: rgba(255, 255, 255, 0.836);
+    box-shadow: 0px 0px 100px 0px rgb(0, 0, 0);
+    overflow: auto;
+    white-space: nowrap ;
+    
 
-footer a{
+}
+
+table{
+    white-space: nowrap ;
+}
+
+tr {
+   text-align: center;
+}
+
+tr th{
+    background-color: #0D2840 !important;
+    color: white !important;
+}
+
+
+
+/* ======= FOOTER ======= */
+footer a {
     text-decoration: none;
     color: black;
 }
-       
-.row.mt-4.align-items-center.g-4{
+
+/* ======= OUTROS ======= */
+.row.mt-4.align-items-center.g-4 {
     border-top: solid 5px #0D2840;
-    
 }
-
-
-        
-
-    

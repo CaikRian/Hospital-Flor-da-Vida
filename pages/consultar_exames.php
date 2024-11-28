@@ -131,7 +131,7 @@ $result = $conn->query($sql);
 
         <?php if ($result->num_rows > 0): ?>
             <table class="table table-bordered">
-                <thead class="table-light">
+                <thead>
                     <tr>
                         <th>Protocolo</th>
                         <th>Data</th>
@@ -162,6 +162,7 @@ $result = $conn->query($sql);
                                     <input type="hidden" name="id_consulta" value="<?php echo $consulta['id_consulta']; ?>">
                                     <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir esta consulta?');">Excluir</button>
                                 </form>
+                                
                             </td>
                         </tr>
                     <?php endwhile; ?>

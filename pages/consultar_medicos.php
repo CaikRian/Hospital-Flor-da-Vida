@@ -155,10 +155,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['excluir'])) {
                             <td><?php echo htmlspecialchars($medico['email']); ?></td>
                             <td><?php echo htmlspecialchars($medico['horario_atendimento']); ?></td>
                             <td>
-                                <a href="editar_medico.php?crm_medico=<?php echo $medico['crm']; ?>" class="btn btn-warning">Ver Mais</a>
+                                <a href="editar_medico.php?crm_medico=<?php echo $medico['crm']; ?>" class="btn btn-warning btn-sm">Ver Mais</a>
                                 <form action="" method="POST" class="d-inline">
                                     <input type="hidden" name="crm_medico" value="<?php echo $medico['crm']; ?>">
-                                    <button type="submit" name="excluir" class="btn btn-danger">Excluir</button>
+                                    <button type="submit" name="excluir" class="btn btn-danger btn-sm">Excluir</button>
                                 </form>
                             </td>
                         </tr>

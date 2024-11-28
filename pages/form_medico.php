@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $genero = $_POST['genero'];
     $telefone = $_POST['telefone'];
     $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    $senha_medico = $_POST['senha_medico'];
     $horario_atendimento = $_POST['horario_atendimento'];
 
 
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Preparando a declaração
     if ($stmt = $conn->prepare($sql)) {
         // Ligando os parâmetros
-        $stmt->bind_param('ssssssss', $nome_completo, $crm, $especialidade, $genero, $telefone, $email, $senha_hash, $horario_atendimento);
+        $stmt->bind_param('ssssssss', $nome_completo, $crm, $especialidade, $genero, $telefone, $email, $senha_medico, $horario_atendimento);
 
         // Executando a declaração
         if ($stmt->execute()) {
@@ -59,7 +59,7 @@ $conn->close();
 </head>
 <body>
 
-    <!-- Menu do Site -->
+    <!-- Menu do Site Médico-->
     <nav class="navbar navbar-expand-lg navbar-light fs-6 pe-5 fixed-top color">
         <a class="navbar-brand ms-4 me-5" href="#">
             <img src="../assets/img/_a4fe6667-c233-41ab-a6a9-264c97b17558.jpeg" alt="Hospital Flor da Vida" class="img-fluid" width="70">
@@ -161,7 +161,7 @@ $conn->close();
                 </div>
                 <div class="col-md-4">
                     <label for="senha" class="form-label">* Senha</label>
-                    <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" required>
+                    <input type="password" class="form-control" id="senha_medico" name="senha_medico" placeholder="Digite sua senha" required>
                 </div>
             </div>
             
@@ -235,5 +235,6 @@ $conn->close();
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
