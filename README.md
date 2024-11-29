@@ -48,14 +48,15 @@ Antes de iniciar, é necessário ter as seguintes ferramentas instaladas:
 
 - Clone o repositório ou baixe os arquivos do projeto em formato ZIP.
 - Extraia os arquivos para o diretório do XAMPP, geralmente em `C:\xampp\htdocs\` (Windows) ou `/opt/lampp/htdocs/` (Linux).
-- O caminho completo pode ser algo como: `C:\xampp\htdocs\gestao_consultas\`.
+- O caminho completo deve ser algo como: `C:\xampp\htdocs\Hospital-Flor-da-Vida\`.
 
 ### 3. Configurar o Banco de Dados
 
 - Abra o XAMPP e inicie os serviços **Apache** e **MySQL**.
 - Acesse o [phpMyAdmin](http://localhost/phpmyadmin/) no navegador.
-- Na aba de Banco de Dados, Clique em "Novo", e coloque o arquivo "[text](hospitalflordavida.sql)"
+- Na aba de Banco de Dados, Clique em "Novo", crie um BD com o nome EXATAMENTE "hospitalflordavida" e coloque este arquivo: "[hospitalflordavida.sql](./assets/controller/hospitalflordavida.sql)"
 - Importe o arquivo SQL fornecido para popular as tabelas com os dados fictícios. 
+- Seu banco de dados deve ficar assim: <img src="assets/controller/Tabelas.png" alt="Tabelas BD" width="100%"/>
 
 ### 4. Configurar o Arquivo de Conexão (Opcional)
 

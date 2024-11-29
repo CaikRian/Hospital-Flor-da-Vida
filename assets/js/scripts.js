@@ -1,70 +1,60 @@
 
-// Calcula a data máxima como 18 anos atrás da data atual
-const hoje = new Date();
-const ano = hoje.getFullYear() - 18; // mínimo de 18 anos
-const mes = ('0' + (hoje.getMonth() + 1)).slice(-2); // Adiciona zero à esquerda para garantir 2 dígitos
-const dia = ('0' + hoje.getDate()).slice(-2);
-const dataMaxima = `${ano}-${mes}-${dia}`;
-
-document.getElementById('data_nascimento').setAttribute('max', dataMaxima);
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Máscara para CPF
-    function mascaraCPF(valor) {
-        valor = valor.replace(/\D/g, ''); // Remove tudo o que não é dígito
-        if (valor.length > 11) valor = valor.slice(0, 11); // Limita o número de dígitos
-        valor = valor.replace(/(\d{3})(\d)/, '$1.$2'); // Adiciona o ponto
-        valor = valor.replace(/(\d{3})(\d)/, '$1.$2'); // Adiciona o ponto
-        valor = valor.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Adiciona o hífen
-        return valor;
-    }
-
-    // Máscara para Telefone
-    function mascaraTelefone(valor) {
-        valor = valor.replace(/\D/g, ''); // Remove tudo o que não é dígito
-        if (valor.length > 11) valor = valor.slice(0, 11); // Limita o número de dígitos
-        valor = valor.replace(/^(\d{2})(\d)/, '($1) $2'); // Adiciona o parêntese e espaço
-        valor = valor.replace(/(\d{5})(\d)/, '$1-$2'); // Adiciona o hífen
-        return valor;
-    }
-
-    // Máscara para CEP
-    function mascaraCEP(valor) {
-        valor = valor.replace(/\D/g, ''); // Remove tudo o que não é dígito
-        if (valor.length > 8) valor = valor.slice(0, 8); // Limita o número de dígitos
-        valor = valor.replace(/(\d{5})(\d{0,3})$/, '$1-$2'); // Adiciona o hífen
-        return valor;
-    }
-
-    // Aplicar máscaras aos campos
-    const cpfInput = document.getElementById('cpf');
-    const telefoneInput = document.getElementById('telefone');
-    const cepInput = document.getElementById('cep');
-
-    cpfInput.addEventListener('input', function(event) {
-        event.target.value = mascaraCPF(event.target.value);
+document.addEventListener('DOMContentLoaded', function () {
+    
+    // Máscara de CPF
+    document.getElementById('cpf_paciente').addEventListener('input', function(e) {
+        let cpf = e.target.value.replace(/\D/g, '');
+        if (cpf.length <= 11) {
+            cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{1})/, '$1.$2.$3-$4');
+        }
+        e.target.value = cpf;
     });
 
-    telefoneInput.addEventListener('input', function(event) {
-        event.target.value = mascaraTelefone(event.target.value);
+    const btnPaciente = document.getElementById('btn-paciente');
+    const btnMedico = document.getElementById('btn-medico');
+    const btnAdmin = document.getElementById('btn-admin');
+    const formPaciente = document.getElementById('form-paciente');
+    const formMedico = document.getElementById('form-medico');
+    const formAdmin = document.getElementById('form-admin');
+
+    // Exibir o formulário de paciente por padrão
+    formPaciente.classList.add('active');
+    btnPaciente.classList.remove('btn-secondary');
+    btnPaciente.classList.add('btn-primary');
+
+    btnPaciente.addEventListener('click', () => {
+        formPaciente.classList.add('active');
+        formMedico.classList.remove('active');
+        formAdmin.classList.remove('active');
+        btnPaciente.classList.remove('btn-secondary');
+        btnPaciente.classList.add('btn-primary');
+        btnMedico.classList.remove('btn-primary');
+        btnMedico.classList.add('btn-secondary');
+        btnAdmin.classList.remove('btn-primary');
+        btnAdmin.classList.add('btn-secondary');
     });
 
-    cepInput.addEventListener('input', function(event) {
-        event.target.value = mascaraCEP(event.target.value);
+    btnMedico.addEventListener('click', () => {
+        formMedico.classList.add('active');
+        formPaciente.classList.remove('active');
+        formAdmin.classList.remove('active');
+        btnMedico.classList.remove('btn-secondary');
+        btnMedico.classList.add('btn-primary');
+        btnPaciente.classList.remove('btn-primary');
+        btnPaciente.classList.add('btn-secondary');
+        btnAdmin.classList.remove('btn-primary');
+        btnAdmin.classList.add('btn-secondary');
     });
 
-    // Validação dos campos
-    function validarCampo(input, comprimento) {
-        input.addEventListener('blur', function(event) {
-            if (event.target.value.replace(/\D/g, '').length !== comprimento) {
-                event.target.classList.add('is-invalid');
-            } else {
-                event.target.classList.remove('is-invalid');
-            }
-        });
-    }
-
-    validarCampo(cpfInput, 11); // CPF deve ter 11 dígitos numéricos
-    validarCampo(telefoneInput, 11); // Telefone deve ter 11 dígitos numéricos
-    validarCampo(cepInput, 8); // CEP deve ter 8 dígitos numéricos
+    btnAdmin.addEventListener('click', () => {
+        formAdmin.classList.add('active');
+        formPaciente.classList.remove('active');
+        formMedico.classList.remove('active');
+        btnAdmin.classList.remove('btn-secondary');
+        btnAdmin.classList.add('btn-primary');
+        btnPaciente.classList.remove('btn-primary');
+        btnPaciente.classList.add('btn-secondary');
+        btnMedico.classList.remove('btn-primary');
+        btnMedico.classList.add('btn-secondary');
+    });
 });
