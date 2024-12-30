@@ -9,15 +9,6 @@
 Este é um sistema de gestão de consultas médicas, desenvolvido para realizar o agendamento de consultas, cadastro de pacientes, médicos e administradores, utilizando PHP e MySQL. O projeto foi configurado para ser rodado localmente em um servidor Apache com o XAMPP.
 
 ## Descrição
-Trabalho feito para a materia de: *Desenvolvimento de Software para Web*
-
-Período: Noturno
-
-Professor: Gerson Gazola
-
-Aluno: Caik Rian Gadelha Vieira
-
-R.A: 2110810
 
 Este é um site fictício criado para demonstrar um sistema de cadastro de pacientes para um hospital. O site é focado em fornecer uma interface intuitiva para que os médicos possam registrar e gerenciar informações dos pacientes, agendamentos, exames e diagnósticos.
 
